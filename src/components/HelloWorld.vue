@@ -1,10 +1,11 @@
 <template>
   <div>
-    <lightgallery :settings="{ speed: 500, plugins }">
+    <lightgallery :settings="{ speed: 500, plugins }" :onInit="onInit" style="display:flex;flex-wrap: wrap;justify-content: center">
       <a  v-for="(image, imageIndex) in images"
           :href="image.src"
           :key="imageIndex"
           @click="index = imageIndex"
+          style="margin:10px"
       >
         <img :alt="image.title" :src="image.thumb">
       </a>
@@ -17,7 +18,7 @@ import { CognitoIdentityClient } from '@aws-sdk/client-cognito-identity'
 import { fromCognitoIdentityPool } from '@aws-sdk/credential-provider-cognito-identity'
 import { S3Client, ListObjectsCommand } from '@aws-sdk/client-s3'
 
-import { ref } from 'vue'
+import { nextTick, ref, watch } from 'vue'
 
 import Lightgallery from 'lightgallery/vue';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
@@ -43,6 +44,7 @@ export default {
     const albumPhotosKey = 'images/'
 
     const images = ref([])
+    const lightGallery = ref(null)
     s3Client.send(
         new ListObjectsCommand({
           Prefix: albumPhotosKey,
@@ -53,9 +55,9 @@ export default {
               .filter(photo => photo.Key !== 'images/')
               .map(photo => {
                 return {
-                  src: `${photo.Key}`,
-                  thumb: `${photo.Key.replace('images/', 'thumbnails/')}`,
-                  title: `${photo.Key.replace('images/', '')}`
+                  src: `https://petrichor.band/${photo.Key}`,
+                  thumb: `https://petrichor.band/${photo.Key.replace('images/', 'thumbnails/')}`,
+                  title: `https://petrichor.band/${photo.Key.replace('images/', '')}`
                 }
               })
         })
@@ -65,10 +67,21 @@ export default {
           }
         })
 
+    watch(images, () => {
+      nextTick().then(() => {
+        if (lightGallery.value) {
+          lightGallery.value.refresh()
+        }
+      })
+    })
+
     return {
       images,
       index: null,
-      plugins: [lgThumbnail, lgZoom]
+      plugins: [lgThumbnail, lgZoom],
+      onInit: detail => {
+        lightGallery.value = detail.instance;
+      }
     }
   }
 }
