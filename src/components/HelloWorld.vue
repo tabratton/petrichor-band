@@ -54,7 +54,7 @@ export default {
               .map(photo => {
                 return {
                   src: `${photo.Key}`,
-                  thumb: `${photo.Key.replace('images/', 'thumbs/')}`,
+                  thumb: `${photo.Key.replace('images/', 'thumbnails/')}`,
                   title: `${photo.Key.replace('images/', '')}`
                 }
               })
