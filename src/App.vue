@@ -1,6 +1,6 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <img alt="Petrichor Logo" src="./assets/logo.png" style="height: 256px;width: 256px">
+  <HelloWorld/>
 </template>
 
 <script>
