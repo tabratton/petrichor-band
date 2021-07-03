@@ -1,13 +1,13 @@
 <template>
   <div>
-    <lightgallery :settings="{ speed: 500, plugins }" :onInit="onInit" style="display:flex;flex-wrap: wrap;justify-content: center">
-      <a  v-for="(image, imageIndex) in images"
+    <lightgallery :settings="{ speed: 500, plugins }" :onInit="onInit" class="flex flex-wrap justify-center">
+      <a
+          v-for="(image, imageIndex) in images"
           :href="image.src"
           :key="imageIndex"
           @click="index = imageIndex"
-          style="margin:10px"
       >
-        <img :alt="image.title" :src="image.thumb">
+        <img class="m-3 rounded" :alt="image.title" :src="image.thumb">
       </a>
     </lightgallery>
   </div>

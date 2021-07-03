@@ -1,5 +1,10 @@
 <template>
-  <img alt="Petrichor Logo" src="./assets/logo.png" style="height: 256px;width: 256px">
+  <img
+      class="h-16 w-16 md:h-32 md:w-32 lg:h-48 lg:w-48"
+      id="logo"
+      alt="Petrichor Logo"
+      src="./assets/logo.png"
+  >
   <HelloWorld/>
 </template>
 
@@ -15,12 +20,12 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+/*#app {*/
+/*  font-family: Avenir, Helvetica, Arial, sans-serif;*/
+/*  -webkit-font-smoothing: antialiased;*/
+/*  -moz-osx-font-smoothing: grayscale;*/
+/*  text-align: center;*/
+/*  color: #2c3e50;*/
+/*  margin-top: 60px;*/
+/*}*/
 </style>
