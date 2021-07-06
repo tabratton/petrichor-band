@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="px-4">
     <lightgallery :settings="{ speed: 500, plugins }" :onInit="onInit" class="flex flex-wrap justify-center">
       <a
           v-for="(image, imageIndex) in images"
@@ -7,7 +7,11 @@
           :key="imageIndex"
           @click="index = imageIndex"
       >
-        <img class="m-3 rounded" :alt="image.title" :src="image.thumb">
+        <img :src="image.thumb300"
+             :alt="image.title"
+             loading="lazy"
+             class="m-3 rounded"
+        >
       </a>
     </lightgallery>
   </div>
@@ -16,7 +20,7 @@
 <script>
 import { CognitoIdentityClient } from '@aws-sdk/client-cognito-identity'
 import { fromCognitoIdentityPool } from '@aws-sdk/credential-provider-cognito-identity'
-import { S3Client, ListObjectsCommand } from '@aws-sdk/client-s3'
+import { S3Client, ListObjectsV2Command } from '@aws-sdk/client-s3'
 
 import { nextTick, ref, watch } from 'vue'
 
@@ -46,7 +50,7 @@ export default {
     const images = ref([])
     const lightGallery = ref(null)
     s3Client.send(
-        new ListObjectsCommand({
+        new ListObjectsV2Command({
           Prefix: albumPhotosKey,
           Bucket: albumBucketName
         }))
@@ -56,7 +60,9 @@ export default {
               .map(photo => {
                 return {
                   src: `https://petrichor.band/${photo.Key}`,
-                  thumb: `https://petrichor.band/${photo.Key.replace('images/', 'thumbnails/')}`,
+                  thumb250: `https://petrichor.band/${photo.Key.replace('images/', 'thumbnails/').replace('.jpg', 'w250.jpg')}`,
+                  thumb350: `https://petrichor.band/${photo.Key.replace('images/', 'thumbnails/').replace('.jpg', 'w350.jpg')}`,
+                  thumb300: `https://petrichor.band/${photo.Key.replace('images/', 'thumbnails/').replace('.jpg', 'h300.jpg')}`,
                   title: `https://petrichor.band/${photo.Key.replace('images/', '')}`
                 }
               })
