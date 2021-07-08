@@ -6373,10 +6373,10 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-lightgallery@^2.1.7:
-  version "2.1.7"
-  resolved "https://registry.yarnpkg.com/lightgallery/-/lightgallery-2.1.7.tgz#7856d2c4922caa279a12682d2d8f5b974dc87494"
-  integrity sha512-u96yhzf7tz4IbBcylYUk7meJFbDNnXFIyn/HtuLSGbV9Z11xN9Q3JZxzm+c0RVDtM1GK9s91lYE5UY5ZfuG/ng==
+lightgallery@^2.1.8:
+  version "2.1.8"
+  resolved "https://registry.yarnpkg.com/lightgallery/-/lightgallery-2.1.8.tgz#11fc2a84f8719ad86184ddab59f46222b93f533c"
+  integrity sha512-YyPVsnCDn6NHDemJ44NM0cgqROOpxvLlO09fQz+++mo9BVmhyRvn+jykZsZit53QiHQPlgLxLhMRa5cCF3htkg==
 
 lilconfig@^2.0.3:
   version "2.0.3"
