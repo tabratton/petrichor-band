@@ -9,7 +9,7 @@
     "deploy": "vue-cli-service s3-deploy"
   },
   "dependencies": {
-    "@aws-sdk/client-cognito-identity": "^3.21.0",
+    "@aws-sdk/client-cognito-identity": "^3.22.0",
     "@aws-sdk/client-s3": "^3.21.0",
     "@aws-sdk/credential-provider-cognito-identity": "^3.21.0",
     "@tailwindcss/postcss7-compat": "^2.2.4",
