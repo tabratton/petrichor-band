@@ -11,7 +11,7 @@
   "dependencies": {
     "@aws-sdk/client-cognito-identity": "^3.21.0",
     "@aws-sdk/client-s3": "^3.21.0",
-    "@aws-sdk/credential-provider-cognito-identity": "^3.21.0",
+    "@aws-sdk/credential-provider-cognito-identity": "^3.23.0",
     "@tailwindcss/postcss7-compat": "^2.2.4",
     "autoprefixer": "^9",
     "core-js": "^3.6.5",
@@ -28,7 +28,7 @@
     "@vue/compiler-sfc": "3.1.4",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.13.0",
+    "eslint-plugin-vue": "^7.14.0",
     "vue-cli-plugin-s3-deploy": "^4.0.0-rc4",
     "vue-cli-plugin-tailwind": "~2.0.6"
   },
