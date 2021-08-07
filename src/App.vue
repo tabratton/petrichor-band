@@ -1,25 +1,30 @@
 <template>
-  <div class="flex flex-col items-center">
+  <div class="flex flex-col items-center p-2">
     <img
-        class="h-16 w-16 md:h-32 md:w-32 lg:h-48 lg:w-48"
+        class="h-32 w-32 lg:h-48 lg:w-48 mb-4"
         id="logo"
         alt="Petrichor Logo"
         src="./assets/logo.png"
     >
-    <a class="text-white m-4" href="mailto:contact@petrichor.band">
+    <a class="btn mail mb-4" href="mailto:contact@petrichor.band">
+      <font-awesome-icon size="lg" :icon="['far', 'envelope']" />
       contact@petrichor.band
     </a>
+    <a class="btn instagram" href="https://www.instagram.com/petrichor_band_239/" target="_blank">
+      <font-awesome-icon size="lg" :icon="['fab', 'instagram']" />
+      @petrichor_band_239
+    </a>
   </div>
-  <HelloWorld/>
+  <BandImages/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BandImages from './components/BandImages.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    BandImages
   }
 }
 </script>

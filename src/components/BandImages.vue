@@ -29,7 +29,7 @@ import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 
 export default {
-  name: 'HelloWorld',
+  name: 'BandImages',
   components: {
     Lightgallery
   },

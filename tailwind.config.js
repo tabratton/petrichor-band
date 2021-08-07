@@ -1,13 +1,20 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: { content: ['./public/**/*.html', './src/**/*.vue', './src/**/*.js'] },
+  purge: {
+    content: ['./public/**/*.html', './src/**/*.vue', './src/**/*.js'],
+
+    options: {
+      safelist: [/svg.*/, /fa.*/]
+    }
+  },
   darkMode: 'media',
   theme: {
     extend: {
       colors: {
         gray: colors.warmGray,
-        'light-black': 'rgb(15, 15, 15)'
+        orange: colors.orange,
+        teal: colors.teal
       },
       height: {
         'logo-sm': '128px',
