@@ -16,7 +16,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/vue-fontawesome": "^3.0.0-4",
-    "@tailwindcss/postcss7-compat": "^2.2.4",
+    "@tailwindcss/postcss7-compat": "^2.2.7",
     "autoprefixer": "^9",
     "core-js": "^3.16.1",
     "lightgallery": "^2.1.8",
