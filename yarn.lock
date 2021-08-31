@@ -68,7 +68,7 @@
   dependencies:
     tslib "^2.3.0"
 
-"@aws-sdk/client-cognito-identity@3.27.0", "@aws-sdk/client-cognito-identity@^3.25.0":
+"@aws-sdk/client-cognito-identity@3.27.0":
   version "3.27.0"
   resolved "https://registry.yarnpkg.com/@aws-sdk/client-cognito-identity/-/client-cognito-identity-3.27.0.tgz#256e04321ce0883d07b90268e6a0edceaadfc620"
   integrity sha512-MTIkt0Y5uzmJ80CyyhJW5n3rXuqQaZNhkCSTiezrpyhIVqrRTDc9/lzVyqo1ZeTyksUqXbq/PiXDdxuuR0Ngdw==
@@ -101,6 +101,43 @@
     "@aws-sdk/util-body-length-node" "3.23.0"
     "@aws-sdk/util-user-agent-browser" "3.25.0"
     "@aws-sdk/util-user-agent-node" "3.27.0"
+    "@aws-sdk/util-utf8-browser" "3.23.0"
+    "@aws-sdk/util-utf8-node" "3.23.0"
+    tslib "^2.3.0"
+
+"@aws-sdk/client-cognito-identity@^3.28.0":
+  version "3.28.0"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/client-cognito-identity/-/client-cognito-identity-3.28.0.tgz#5d91f182334f5bed8c2e7ed65359cc9366a22c12"
+  integrity sha512-LoQn1rvBiTWpHtKmOzw5myJez+35c/vdVZd1x1nRRU5CZcp2LOltHKsvdOsREJeX3vi9Q+rb8rXsVk7jC1lSUQ==
+  dependencies:
+    "@aws-crypto/sha256-browser" "^1.0.0"
+    "@aws-crypto/sha256-js" "^1.0.0"
+    "@aws-sdk/client-sts" "3.28.0"
+    "@aws-sdk/config-resolver" "3.28.0"
+    "@aws-sdk/credential-provider-node" "3.28.0"
+    "@aws-sdk/fetch-http-handler" "3.25.0"
+    "@aws-sdk/hash-node" "3.25.0"
+    "@aws-sdk/invalid-dependency" "3.25.0"
+    "@aws-sdk/middleware-content-length" "3.25.0"
+    "@aws-sdk/middleware-host-header" "3.25.0"
+    "@aws-sdk/middleware-logger" "3.25.0"
+    "@aws-sdk/middleware-retry" "3.28.0"
+    "@aws-sdk/middleware-serde" "3.25.0"
+    "@aws-sdk/middleware-signing" "3.28.0"
+    "@aws-sdk/middleware-stack" "3.25.0"
+    "@aws-sdk/middleware-user-agent" "3.25.0"
+    "@aws-sdk/node-config-provider" "3.28.0"
+    "@aws-sdk/node-http-handler" "3.25.0"
+    "@aws-sdk/protocol-http" "3.25.0"
+    "@aws-sdk/smithy-client" "3.28.0"
+    "@aws-sdk/types" "3.25.0"
+    "@aws-sdk/url-parser" "3.25.0"
+    "@aws-sdk/util-base64-browser" "3.23.0"
+    "@aws-sdk/util-base64-node" "3.23.0"
+    "@aws-sdk/util-body-length-browser" "3.23.0"
+    "@aws-sdk/util-body-length-node" "3.23.0"
+    "@aws-sdk/util-user-agent-browser" "3.25.0"
+    "@aws-sdk/util-user-agent-node" "3.28.0"
     "@aws-sdk/util-utf8-browser" "3.23.0"
     "@aws-sdk/util-utf8-node" "3.23.0"
     tslib "^2.3.0"
