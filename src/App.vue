@@ -6,14 +6,20 @@
         alt="Petrichor Logo"
         src="./assets/logo.png"
     >
-    <a class="btn mail mb-4" href="mailto:contact@petrichor.band">
-      <font-awesome-icon size="lg" :icon="['far', 'envelope']" />
-      contact@petrichor.band
-    </a>
-    <a class="btn instagram" href="https://www.instagram.com/petrichor_band_239/" target="_blank">
-      <font-awesome-icon size="lg" :icon="['fab', 'instagram']" />
-      @petrichor_band_239
-    </a>
+    <div class="flex items-center">
+      <font-awesome-icon class="text-white mr-2" size="lg" :icon="['far', 'envelope']" />
+      <span class="text-white mr-2">E-mail:</span>
+      <a class="text-blue-500 hover:text-blue-700" href="mailto:contact@petrichor.band">
+        contact@petrichor.band
+      </a>
+    </div>
+    <div class="flex items-center">
+      <font-awesome-icon class="text-white mr-2" size="lg" :icon="['fab', 'instagram']" />
+      <span class="text-white mr-2">Instagram:</span>
+      <a class="text-blue-500 hover:text-blue-700" href="https://www.instagram.com/petrichor_band_239/" target="_blank">
+        @petrichor_band_239
+      </a>
+    </div>
   </div>
   <BandImages/>
 </template>
