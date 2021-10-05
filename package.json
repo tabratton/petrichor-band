@@ -9,7 +9,7 @@
     "deploy": "vue-cli-service s3-deploy"
   },
   "dependencies": {
-    "@aws-sdk/client-cognito-identity": "^3.31.0",
+    "@aws-sdk/client-cognito-identity": "^3.35.0",
     "@aws-sdk/client-s3": "^3.31.0",
     "@aws-sdk/credential-provider-cognito-identity": "^3.31.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
