@@ -16,7 +16,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/vue-fontawesome": "^3.0.0-4",
-    "core-js": "^3.17.3",
+    "core-js": "^3.19.3",
     "lightgallery": "^2.2.1",
     "vue": "3.2.11",
     "vue-plugin-load-script": ">=2.0.0"
