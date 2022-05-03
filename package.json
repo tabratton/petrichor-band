@@ -11,7 +11,7 @@
   "dependencies": {
     "@aws-sdk/client-cognito-identity": "^3.54.1",
     "@aws-sdk/client-s3": "^3.54.1",
-    "@aws-sdk/credential-provider-cognito-identity": "^3.54.1",
+    "@aws-sdk/credential-provider-cognito-identity": "^3.82.0",
     "@fortawesome/fontawesome-svg-core": "^1.3.0",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
